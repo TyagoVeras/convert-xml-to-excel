@@ -15,13 +15,7 @@ function createFileExcel(input, output) {
       { header: 'QUANTIDADE', key: 'qntd', width: 30 },
       { header: 'PRECO UNITARIO', key: 'price_unit', width: 10 },
       { header: 'PRECO TOTAL', key: 'price_total', width: 10 },
-      { header: 'PRECO DE COMPRA', key: 'purchase_price', width: 10},
-      { header: 'PRECO DE VENDA', key: 'sale_price', width: 10}
     ];
-
-    const convertChunkToJSON = (chunk) => {
-       xml2json.toJson(chunk, {object: true});
-    }
 
     const makeProduct = (product) => {
       return {
@@ -31,8 +25,6 @@ function createFileExcel(input, output) {
         qntd: product.qCom,
         price_unit: product.vUnCom,
         price_total: product.vProd,
-        purchase_price: (product.vUnCom * 4),
-        sale_price: (product.vUnCom * 4) * 2
       }
     }
      fs.readFile(input, (err, data) => {
