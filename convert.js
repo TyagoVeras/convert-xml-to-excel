@@ -47,4 +47,4 @@ function createFileExcel(input, output) {
   }
 
 
-createFileExcel('./nota.xml', './excel.xlsx')
+createFileExcel('./input.xml', './result.xlsx')
