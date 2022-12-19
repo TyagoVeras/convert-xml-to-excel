@@ -1,0 +1,11 @@
+{
+  "name": "readxml",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "exceljs": "^4.3.0",
+    "xml2json": "^0.12.0"
+  }
+}
